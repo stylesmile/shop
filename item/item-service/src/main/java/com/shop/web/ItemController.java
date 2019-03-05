@@ -1,6 +1,6 @@
 package com.shop.web;
 
-import com.shop.ExceptionEnums;
+import com.shop.enums.ExceptionEnums;
 import com.shop.entity.Item;
 import com.shop.exception.ShopException;
 import com.shop.service.ItemService;
@@ -21,10 +21,10 @@ public class ItemController {
     @Autowired
     private ItemService itemService;
 
-    @PostMapping
+    @PostMapping("/saveItem")
     @ResponseBody
-    public ResponseEntity<Item> saveItem(Item item){
-        if(item.getPrive()==null){
+    public ResponseEntity<Item> saveItem(Item item) {
+        if (item.getPrice() == null) {
             throw new ShopException(ExceptionEnums.PRICE_CONNOT_BE_NULL);
             //return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }

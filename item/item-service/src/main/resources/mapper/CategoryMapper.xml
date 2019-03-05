@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shop.mapper.CategoryMapper">
+    <resultMap id="category" type="com.shop.entity.Category"/>
+    <parameterMap id="category2" type="com.shop.entity.Category"/>
+
+    <select id="queryCategoryListByPid" resultMap="category">
+        select * from category where parent_id is not null
+    </select>
+
+</mapper>

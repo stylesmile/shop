@@ -1,6 +1,6 @@
 package com.shop.vo;
 
-import com.shop.ExceptionEnums;
+import com.shop.enums.ExceptionEnums;
 import lombok.Data;
 
 /**
@@ -14,9 +14,10 @@ public class ExceptionResult {
     private int status;
     private String message;
     private Long timestmap;
-    public ExceptionResult(ExceptionEnums em){
-        this.status=em.getCode();
-        this.message=em.getMsg();
-        this.timestmap= System.currentTimeMillis();
+
+    public ExceptionResult(ExceptionEnums em) {
+        this.status = em.getCode();
+        this.message = em.getMsg();
+        this.timestmap = System.currentTimeMillis();
     }
 }

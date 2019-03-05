@@ -1,6 +1,6 @@
 package com.shop.exception;
 
-import com.shop.ExceptionEnums;
+import com.shop.enums.ExceptionEnums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

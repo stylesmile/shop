@@ -13,7 +13,7 @@ eureka:
     fetchRegistry: false
     #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个
     service-url:
-      defaultZone: http://127.0.0.1:8002/eureka/
+      defaultZone: http://127.0.0.1:8001/eureka/
     #每30秒捕获一次
     registry-fetch-interval-seconds: 30
   instance:

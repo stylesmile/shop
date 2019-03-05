@@ -1,6 +1,6 @@
 package com.shop.advice;
 
-import com.shop.ExceptionEnums;
+import com.shop.enums.ExceptionEnums;
 import com.shop.exception.ShopException;
 import com.shop.vo.ExceptionResult;
 import org.springframework.http.ResponseEntity;
