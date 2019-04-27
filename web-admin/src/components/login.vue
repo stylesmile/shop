@@ -1,11 +1,11 @@
 <template>
   <div class="login">
     <el-row style="margin-top: 260px;z-index: 1;">
-      <el-col :model="user" :offset="9" :span="6">
+      <el-col :model="user" :offset="10" :span="4">
         <!--<el-card class="login-box" v-loading="$store.state.loading" element-loading-background="rgba(0, 0, 0, 0.8)">-->
         <el-card class="login-box" v-loading="" element-loading-background="rgba(0, 0, 0, 0.8)">
           <el-form>
-            <h1 class="title">欢迎使用web-admin</h1>
+            <h1 class="title">web-admin</h1>
             <el-form-item>
               <el-input type="text" v-model="user.userName" auto-complete="off" placeholder="请输入用户名..."
                         suffix-icon="el-icon-bell"></el-input>
@@ -38,11 +38,6 @@
   .login-box {
     background: #ffffff;
     border: none;
-  }
-
-  .login-box-msg {
-    color: #000000;
-    text-align: center;
   }
 
   .login-box .title {
