@@ -51,16 +51,21 @@ export default {
   data () {
     return {
       user: {
-        userName: '',
-        password: ''
-      }
+        userName: 'admin',
+        password: '123456'
+      },
+      loading: false,
+      pwdType: 'password'
+
     }
   },
   methods: {
     login () {
       this.$http.post('/passport/signIn', this.user).then(res => {
         if (res.data.token) {
-          this.$store.commit('setToken', res.data.token)
+          this.loading = false
+          // this.$store.dispatch('Login', res.data.token)
+          this.loading = false
           this.$router.push({path: '/'})
         }
       })
