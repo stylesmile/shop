@@ -5,8 +5,9 @@
     <parent>
         <artifactId>item</artifactId>
         <groupId>com.shop</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${item.version}</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>item-console</artifactId>
     <name>item-console</name>

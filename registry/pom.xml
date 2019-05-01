@@ -11,9 +11,9 @@
 
     <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>registry</artifactId>
-
+    <version>${registry.version}</version>
+    <name>registry</name>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

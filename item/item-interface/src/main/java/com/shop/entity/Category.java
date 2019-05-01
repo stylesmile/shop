@@ -4,9 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 /**
- * @description 商品分类
+ * 用户
+ *
  * @author Stylesmile
  * @date 2019/01/06
  */

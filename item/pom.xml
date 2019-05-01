@@ -13,10 +13,12 @@
     <groupId>com.shop</groupId>
     <artifactId>item</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <name>item</name>
+    <version>${item.version}</version>
     <modules>
         <module>item-service</module>
         <module>item-interface</module>
+        <module>item-console</module>
     </modules>
 
 
