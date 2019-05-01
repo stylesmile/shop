@@ -1,0 +1,63 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: item-server
+  datasource:
+#    hikari:
+#      jdbc-url: jdbc:mysql://192.168.141.130:3309/shop?useUnicode=true&characterEncoding=utf-8
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      username: test
+#      password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.141.130:3309/shop?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+    #type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+    username: test
+    password: 123456
+
+
+
+eureka:
+  client:
+    #表示是否将自己注册到Eureka Server，默认为true。
+    registerWithEureka: true
+    #表示是否从Eureka Server获取注册信息，默认为true。
+    fetchRegistry: true
+    #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+    #每30秒捕获一次
+    registry-fetch-interval-seconds: 30
+  instance:
+    prefer-ip-address: true
+    #status显示
+    instance-id: 127.0.0.1
+
+
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.example.entity
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: id_worker
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: not_empty
+      #驼峰下划线转换
+      column-underline: true
+      #数据库大写下划线转换
+      #capital-mode: true
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: h2
+    #刷新mapper 调试神器
+    refresh: true
+  # 原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
