@@ -10,8 +10,7 @@
 
     <groupId>com.shop</groupId>
     <artifactId>item-service</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-
+    <version>${item-service.version}</version>
     <name>item-service</name>
     <modelVersion>4.0.0</modelVersion>
 

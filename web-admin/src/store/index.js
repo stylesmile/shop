@@ -1,17 +1,15 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import app from './app'
-import user from './user'
+import vue from 'vue'
+import vuex from 'vuex'
+import app from './modules/app'
+import user from './modules/user'
 import getters from './getters'
 
-Vue.use(Vuex)
+vue.use(vuex)
 
-const index = new Vuex.Store(
-  {
-    app,
-    user,
-    getters
-  }
-)
+const store = new vuex.Store({
+  app,
+  user,
+  getters
+})
 
-export default index
+export default store

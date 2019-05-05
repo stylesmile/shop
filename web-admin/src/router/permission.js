@@ -15,7 +15,6 @@ NProgress.configure({ showSpinner: false })
 const whiteList = ['/login'] // 不重定向白名单
 router.beforeEach((to, from, next) => {
   NProgress.start()
-  debugger
   if (getToken()) {
     // start progress
     // if token is not empty
